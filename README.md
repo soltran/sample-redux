@@ -1,4 +1,8 @@
 # This is a sample of a redux app structure that I like
+It includes two features that are still WIP
+
+`/netflix` -> Search Netflix titles to see if your title is on Netflix
+`/employment` -> Chart of employment data comparison of years of experience v. pay, title, etc.
 
 
 ##Initial Machine Setup
@@ -37,7 +41,7 @@ This app offers a rich development experience using the following technologies:
 | [Webpack](http://webpack.github.io) | Bundles npm packages and our JS into a single file. Includes hot reloading via [react-transform-hmr](https://www.npmjs.com/package/react-transform-hmr). | [Quick Webpack How-to](https://github.com/petehunt/webpack-howto) [Pluralsight Course](https://www.pluralsight.com/courses/webpack-fundamentals)|
 | [Browsersync](https://www.browsersync.io/) | Lightweight development HTTP server that supports synchronized testing and debugging on multiple devices. | [Intro vid](https://www.youtube.com/watch?time_continue=1&v=heNWfzc7ufQ)|
 |[Jest](https://facebook.github.io/jest/) | Painless Javascript Testing.
-and [Enzyme](https://github.com/airbnb/enzyme) | for DOM testing without a browser using Node. | [Pluralsight Course](https://www.pluralsight.com/courses/testing-javascript) |
+| [Enzyme](https://github.com/airbnb/enzyme) | for DOM testing without a browser using Node. | [Pluralsight Course](https://www.pluralsight.com/courses/testing-javascript) |
 | [Isparta](https://github.com/douglasduteil/isparta) | Code coverage tool for ES6 code transpiled by Babel. |
 | [TrackJS](https://trackjs.com/) | JavaScript error tracking. | [Free trial](https://my.trackjs.com/signup)|  
 | [ESLint](http://eslint.org/)| Lint JS. Reports syntax and style issues. Using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) for additional React specific linting rules. | |
@@ -45,7 +49,7 @@ and [Enzyme](https://github.com/airbnb/enzyme) | for DOM testing without a brows
 | [PostCSS](https://github.com/postcss/postcss) | Transform styles with JS plugins. Used to autoprefix CSS |
 | [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). | [IDE Plugins](http://editorconfig.org/#download) |
 | [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
-
+| [Yarn](https://yarnpkg.com) | FAST, RELIABLE, AND SECURE DEPENDENCY MANAGEMENT
 The starter kit includes a working example app that puts all of the above to use.
 ## Questions?
 Check out the [FAQ](/docs/FAQ.md)
