@@ -1,8 +1,8 @@
 # This is a sample of a redux app structure that I like
 It includes two features that are still WIP
 
-`/netflix` -> Search Netflix titles to see if your title is on Netflix
-`/employment` -> Chart of employment data comparison of years of experience v. pay, title, etc.
+* `/netflix` -> Search Netflix titles to see if your title is on Netflix
+* `/employment` -> Chart of employment data comparison of years of experience v. pay, title, etc.
 
 
 ##Initial Machine Setup
