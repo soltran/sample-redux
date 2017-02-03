@@ -14,24 +14,18 @@ const Home = () => {
       color: 'white'
     },
     jobDataCard: {
-      backgroundColor: 'tan'
+      backgroundColor: 'teal',
+      color: 'white'
     }
-  }
+  };
 
   return (
     <div>
       <Helmet title="Home Page" />
-      <Link to="/netflix">
-        <Card style={styles.netflixCard}>
-          <CardTitle>
-            Click here to search for Netflix titles
-          </CardTitle>
-        </Card>
-      </Link>
-      <Link to="/employment">
+      <Link to="/todo" style={{textDecoration: 'none'}}>
         <Card style={styles.jobDataCard}>>
           <CardTitle>
-            Click here to view Job data
+            Click here to manage Todos
           </CardTitle>
         </Card>
       </Link>
