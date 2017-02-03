@@ -9,12 +9,16 @@ import { Link }                             from 'react-router';
 const Home = () => {
 
   const styles = {
-    netflixCard: {
+    connectFourCard: {
       backgroundColor: 'maroon',
       color: 'white'
     },
     jobDataCard: {
       backgroundColor: 'teal',
+      color: 'white'
+    },
+    suitsCard: {
+      backgroundColor: 'darkBlue',
       color: 'white'
     }
   };
@@ -29,6 +33,20 @@ const Home = () => {
           </CardTitle>
         </Card>
       </Link>
+      <Link to="/connectfour" style={{textDecoration: 'none'}}>
+        <Card style={styles.connectFourCard}>>
+          <CardTitle>
+            Click here to play Connect Four
+          </CardTitle>
+        </Card>
+      </Link>
+      <a href="http://infinitesuits.herokuapp.com/" style={{textDecoration: 'none'}}>
+        <Card style={styles.suitsCard}>
+          <CardTitle>
+            Click here to check out Infinite Suits
+          </CardTitle>
+        </Card>
+      </a>
     </div>
   );
 };

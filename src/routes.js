@@ -5,6 +5,7 @@ import NotFoundPage from './components/NotFoundPage';
 import Home from './components/Home';
 import Employment from './containers/Employment/Employment.container';
 import Todo from './containers/Todo/TodosContainer';
+import ConnectFour from './containers/ConnectFour/ConnectFourContainer';
 
 
 export default (
@@ -15,6 +16,7 @@ export default (
       <Route path="netflix" component={NotFoundPage}/>
       <Route path="employment" component={Employment}/>
       <Route path="todo" component={Todo} />
+      <Route path="connectfour" component={ConnectFour} />
       <Route path="*" component={NotFoundPage}/>
     </Route>
   </Route>
