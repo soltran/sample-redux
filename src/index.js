@@ -11,6 +11,7 @@ require('./favicon.ico'); // Tell webpack to load favicon.ico
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {screenResize} from './global/globalActions'
+import './styles';
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941

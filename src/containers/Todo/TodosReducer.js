@@ -11,10 +11,13 @@ export default function todoReducer(state = initialState.todoPage, action) {
 
   const addTodo = (state, text) => state.set('todos', state.get('todos').unshift(new TodoItem({text})));
 
+  const toggleAbout = (state) => state.set('aboutOpen', !state.get('aboutOpen'));
+
   // prepend all actions with ROOT_NAME
   const actions = {
     'todos/CHANGE_INPUT': () => changeInput(state, action.value),
     'todos/ADD_TODO': () => addTodo(state, action.text),
+    'todos/TOGGLE_ABOUT': () => toggleAbout(state),
     'DEFAULT': () => state,
   }
 

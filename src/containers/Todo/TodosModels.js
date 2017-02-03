@@ -3,6 +3,7 @@ import { Map, Record, List } from 'immutable';
 export const initialState = {
   todoPage: new Map({
     currentInput: '',
+    aboutOpen: true,
     todos: new List([])
   })
 }
