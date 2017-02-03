@@ -7,7 +7,6 @@ import {Card, CardHeader, CardText} from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 import Todo from './components/Todo';
 import Helmet from 'react-helmet';
-import { sFlexRow, uflexPercent } from '../../utils/styleUtils';
 import CollapsibleView from '../../components/CollapsibleView';
 import AboutTodoPage from './components/AboutTodoPage';
 
@@ -23,14 +22,13 @@ const TodosContainer = ({
   const onEnterKeyPress = (e) => {
     if (e.key === 'Enter') {
       addTodo(e.target.value)
+      changeInput('')
     }
   }
 
   const styles = {
 
   };
-
-
 
   return(<div>
 
@@ -40,7 +38,12 @@ const TodosContainer = ({
           <h1>To Do List </h1>
           <Card>
             <CardText>
-              <TextField name="ToDoInput" value={inputValue} onChange={(e, v) => changeInput(v)} onKeyPress={onEnterKeyPress}/>
+              <TextField
+                hintText="Enter Todo Here"
+                name="ToDoInput"
+                value={inputValue}
+                onChange={(e, v) => changeInput(v)}
+                onKeyPress={onEnterKeyPress}/>
               {
                 todoList.map((todo, i) => <Todo key={i} text={todo.get('text')}/>)
               }
