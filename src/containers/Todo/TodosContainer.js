@@ -2,17 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import { compose, onlyUpdateForPropTypes, setPropTypes, withContext, getContext } from 'recompose'
-import {changeInput, addTodo} from './ToDosActions';
+import {changeInput, addTodo} from './TodosActions';
 import {Card, CardHeader, CardText} from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
-import ToDo from './components/ToDo';
+import Todo from './components/Todo';
 import Helmet from 'react-helmet';
 
 
-const ToDosContainer = ({state, actions: {changeInput, addTodo}}) => {
+const TodosContainer = ({state, actions: {changeInput, addTodo}}) => {
 
   const inputValue = state.get('currentInput');
-  const toDoList = state.get('toDos');
+  const todoList = state.get('todos');
 
   const onEnterKeyPress = (e) => {
     if (e.key === 'Enter') {
@@ -32,7 +32,7 @@ const ToDosContainer = ({state, actions: {changeInput, addTodo}}) => {
       <CardText>
         <TextField name="ToDoInput" value={inputValue} onChange={(e, v) => changeInput(v)} onKeyPress={onEnterKeyPress}/>
         {
-          toDoList.map((todo) => <ToDo text={todo.text}/>)
+          todoList.map((todo, i) => <Todo key={i} text={todo.get('text')}/>)
         }
       </CardText>
 
@@ -45,7 +45,7 @@ const ToDosContainer = ({state, actions: {changeInput, addTodo}}) => {
 
 function mapStateToProps(state) {
   return {
-    state: state.toDoPage
+    state: state.todoPage
   }
 }
 
@@ -66,6 +66,6 @@ export default compose(
     mapDispatchToProps),
   onlyUpdateForPropTypes,
   setPropTypes(propTypes)
-)(ToDosContainer)
+)(TodosContainer)
 
 

@@ -3,7 +3,6 @@ import {Card, CardText} from 'material-ui/Card';
 import { compose, onlyUpdateForPropTypes, setPropTypes } from 'recompose'
 const ToDo = ({text}) => {
 
-  console.log('text', text);
   return <div>
     <Card>
       <CardText>

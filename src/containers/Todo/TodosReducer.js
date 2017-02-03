@@ -1,13 +1,6 @@
-import { Map, Record, List } from 'immutable';
+import {initialState, TodoItem } from './TodosModels';
 
-const initialState = {
-  toDoPage: new Map({
-    currentInput: '',
-    toDos: new List([])
-  })
-}
-
-export default function todoReducer(state = initialState.toDoPage, action) {
+export default function todoReducer(state = initialState.todoPage, action) {
 
 
   // --------   Logic to handle actions here  ----------- ..
@@ -16,7 +9,7 @@ export default function todoReducer(state = initialState.toDoPage, action) {
 
   const changeInput = (state, newValue) => state.set('currentInput', newValue);
 
-  const addTodo = (state, text) => state.set('toDos', state.get('toDos').push({text}));
+  const addTodo = (state, text) => state.set('todos', state.get('todos').unshift(new TodoItem({text})));
 
   // prepend all actions with ROOT_NAME
   const actions = {
